@@ -1,0 +1,118 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.cards-outer-div {
+  position: relative;
+  background: #e5fade;
+  border: 2.5px dashed #d8d8d8;
+  width: 95%;
+  height: 7rem;
+}
+
+.hover-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0);
+  height: 100%;
+  width: 100%;
+  transition: background 0.5s ease;
+}
+
+.resume-form-info-card-heading {
+  margin: 0 !important;;
+  font-weight: bold !important;
+  word-break: break-all !important;
+}
+
+.resume-form-mat-icon-button {
+  margin-top: 2rem !important;
+}
+
+.resume-form-mat-icon {
+  font-size: 30px !important;
+}
+
+.cards-outer-div:hover .hover-container {
+  display: block;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.cards-outer-div:hover .hover {
+  opacity: 1;
+}
+
+.hover {
+  opacity: 0;
+  text-align: center;
+  transition: opacity .35s ease;
+}
+
+.template-description {
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 17pt;
+  word-wrap: break-word;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.tabs-heading {
+  font-weight: bolder !important;
+  font-size: 2rem !important;
+  color: #538ec3;
+  text-align: center !important;
+  margin-top: 2rem !important;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+}
+
+.mat-tab-label {
+  color: white !important;
+}
+
+.mat-expansion-panel-header {
+  height: 5rem !important;
+  padding: 10px !important;
+}
+
+button {
+  color: white !important;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d0e9c6;
+  color: #3c763d;
+}
+
+.alert-error {
+  background-color: #f2dede;
+  border-color: #ebcccc;
+  color: #a94442;
+}
+
+.alert .mat-simple-snackbar {
+  justify-content: center;
+}
+
+.setting-label {
+  font-size: 1.2rem !important;
+}
+
+.settings-input {
+  width: 70% !important;
+}
