@@ -6,7 +6,6 @@ import {ForgotPasswordComponent} from './container/forgot-password.component';
 import {VerificationComponent} from './container/verification.component';
 import {AuthGuard} from './guards/auth-guard';
 import {AnonGuard} from './guards/anon-guard';
-import {OnBoardingComponent} from './container/on-boarding/on-boarding.component';
 import {DashboardComponent} from './container/layout/dashboard.component';
 import {VerificationInComplete} from './guards/verification-in-complete';
 import {VerificationCompleted} from './guards/verification-completed';
@@ -21,7 +20,7 @@ import {TemplatesComponent} from './container/templates.component';
 import {SingleTemplateComponent} from './container/single-template.component';
 import {SingleResumeComponent} from './container/single-resume.component';
 import {ResumeFormComponent} from './container/resume-form.component';
-import {UploadComponent} from './container/tabs/upload.componet';
+import {UploadComponent} from './container/tabs/upload.component';
 
 
 const routes: Routes = [
@@ -37,8 +36,7 @@ const routes: Routes = [
     }]
   },
   {
-    path: '', children: [{path: 'on-boarding', component: OnBoardingIntroComponent},
-      {path: 'on-boarding/add', component: OnBoardingComponent}],
+    path: '', children: [{path: 'on-boarding', component: OnBoardingIntroComponent}],
     canActivate: [AuthGuard, VerificationCompleted, OnBoardingInComplete]
   },
   {
