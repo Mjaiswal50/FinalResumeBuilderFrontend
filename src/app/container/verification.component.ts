@@ -26,7 +26,9 @@ import { AuthRepository } from '../repository/auth-repository';
           fxLayout="row"
           class="overlay" [formGroup]="this.otpForm"
           (ngSubmit)="this.otpForm.valid && otpSubmit()">
+          <mat-form-field>
         <input formControlName="OtpVerify" matInput >
+        </mat-form-field>
         <button type="submit" color="accent" mat-button>Submit-Otp</button>
         </form>
     </div>
