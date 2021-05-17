@@ -94,10 +94,14 @@ export class VerificationComponent {
     this.authRepo.setCodeForVerify(data).subscribe((data)=>{
     }); 
   }
+  
   otpSubmit() {
     this.authRepo.otpSubmit(this.otpForm.value).subscribe((data)=>{
+      this.router.navigate['on-boarding'];
+      location.reload();
     });
-    this.router.navigate['on-boarding'];
+  
   }
 //trick: here we make otp verification
 }
+ 
