@@ -21,7 +21,7 @@ import {AuthRepository} from '../repository/auth-repository';
         </mat-form-field>
         <mat-form-field>
           <input formControlName="password" type="password" matInput placeholder="Password"/>
-          <mat-error> (8-12 Digit) Password is Required</mat-error>
+          <mat-error>Password is Required</mat-error>
         </mat-form-field>
         <mat-form-field>
           <input formControlName="confirm_password" matInput placeholder="Confirm Password"/>
