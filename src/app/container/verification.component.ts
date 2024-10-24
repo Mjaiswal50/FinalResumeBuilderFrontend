@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {map} from 'rxjs/operators';
 import { AuthRepository } from '../repository/auth-repository';
+import { AlertService } from '../services/alert-service';
 
 @Component({
   selector: 'app-verification',
@@ -72,7 +73,7 @@ export class VerificationComponent {
   email = '';
   isMailSent = false ;
   otpForm: FormGroup;
-  constructor(private authRepo: AuthRepository,private router: Router,private activatedRoute: ActivatedRoute) {
+  constructor(private authRepo: AuthRepository,private router: Router,private activatedRoute: ActivatedRoute,private alertService: AlertService) {
    this.fetchEmail();
     this.otpForm = new FormGroup({
       OtpVerify: new FormControl(null, [Validators.required]),
@@ -91,7 +92,8 @@ export class VerificationComponent {
     var data = { 
             mail: this.email
            }
-    this.authRepo.setCodeForVerify(data).subscribe((data)=>{
+    this.authRepo.setCodeForVerify(data).subscribe((res)=>{
+      this.alertService.success(`OTP IS :: ${res.otp}`);
     }); 
   }
   
